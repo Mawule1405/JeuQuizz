@@ -42,7 +42,7 @@ def enregistrement_scores(nom, point):
        if name == nom:
            score +=point
            dict_joueur[name] = score
-    with open("C:/Users/hp/Desktop/Quizz/scores.py" , "w") as file:
+    with open("C:/Users/hp/Desktop/JeuQuizz/scores.py" , "w") as file:
         file.write(f"dict_scores = {dict_joueur}")
         file.close()
         

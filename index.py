@@ -1,6 +1,7 @@
 import fonctions
 import scores
 import donnees
+import random
 
 questions = donnees.question
 reponses =donnees.reponse
@@ -39,22 +40,24 @@ while True:
         
        
         print(f"Question: {questions[str(numero)]}")
+        my_liste = [reponses[str(numero)],Freponse_1[str(numero)],Freponse_2[str(numero)],Freponse_3[str(numero)]]
+        random.shuffle(my_liste)
         choix = input(f""" 
                     Choisissez la lettre correspondante à la bonne réponse:
-                    a : {Freponse_1[str(numero)]}
-                    b : {reponses[str(numero)]}
-                    c : {Freponse_2[str(numero)]}
-                    d : {Freponse_3[str(numero)]}
+                    a : {my_liste[0]}
+                    b : {my_liste[1]}
+                    c : {my_liste[2]}
+                    d : {my_liste[3]}
               
               """).lower()
         if  choix == "a":
-            reponse_joueur  = Freponse_1[str(numero)]
+            reponse_joueur  = my_liste[0]
         elif choix == "b":
-            reponse_joueur = reponses[str(numero)]
+            reponse_joueur = my_liste[1]
         elif choix == 'c':
-            reponse_joueur = reponse_2[str(numero)]
+            reponse_joueur = my_liste[2]
         elif choix == 'd' :
-            reponse_joueur = Freponse_3[str(numero)]
+            reponse_joueur = my_liste[3]
         else :
             point = -2
             

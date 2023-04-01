@@ -1,1 +1,1 @@
-dict_scores = {'JUNIOR': 25, 'MAMAN': 15, 'PETIT': 0, 'MATHIAS': 18}
+dict_scores = {'JUNIOR': 25, 'MAMAN': 15, 'PETIT': 15, 'MATHIAS': 18, 'PAUL': 3}
